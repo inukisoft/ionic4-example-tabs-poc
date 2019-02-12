@@ -8,7 +8,7 @@ import { Product } from './product';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = "http://localhost:7776/api/v1/products";
+const apiUrl = "http://localhost:7775/api/v1/products";
 
 @Injectable({
   providedIn: 'root'

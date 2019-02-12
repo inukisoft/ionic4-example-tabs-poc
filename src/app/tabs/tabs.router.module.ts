@@ -8,8 +8,63 @@ import { EditPage } from '../edit/edit.page';
 import { DetailsPage } from '../details/details.page';
 
 
-
 const routes: Routes = [
+  {
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      {
+        path: 'home',
+        children: [
+          {
+            path: '',
+            loadChildren: '../home/home.module#HomePageModule'
+          }
+        ]
+      },
+      {
+        path: 'details/:id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../details/details.module#DetailsPageModule'
+          }
+        ]
+      },
+      {
+        path: 'edit/:id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../edit/edit.module#EditPageModule'
+          }
+        ]
+      },
+      {
+        path: 'add',
+        children: [
+          {
+            path: '',
+            loadChildren: '../add/add.module#AddPageModule'
+          }
+        ]
+      },
+      {
+        path: '',
+        redirectTo: '/tabs/home',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {
+    path: '',
+    redirectTo: '/tabs/home',
+    pathMatch: 'full'
+  }
+];
+
+
+const routess: Routes = [
   
       {
         path: 'home',
@@ -28,6 +83,10 @@ const routes: Routes = [
       {
         path: 'edit', 
         loadChildren: '../edit/edit.module#EditPageModule'
+      },
+      {
+        path: 'add', 
+        loadChildren: '../add/add.module#AddPageModule'
       }
       
 

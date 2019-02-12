@@ -5,10 +5,10 @@
 </ion-header>
 
 <ion-content>
-  <cdk-virtual-scroll-viewport cdkDropList itemSize="20" class="example-viewport" (cdkDropListDropped)="drop($event)">
+  <cdk-virtual-scroll-viewport cdkDropList itemSize="4" class="example-viewport" (cdkDropListDropped)="drop($event)">
     
     <ion-list *cdkVirtualFor="let p of products">
-      <ion-item  class="example-item"  cdkDrag [routerLink]="'/details/' + p._id"  routerDirection="forward">
+      <ion-item  class="example-item"  cdkDrag [routerLink]="'/tabs/details/' + p._id"  routerDirection="forward">
         <ion-icon name="desktop" slot="start" ></ion-icon>
         {{p.prod_name}}
         <div class="item-note" slot="end">

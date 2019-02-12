@@ -19,7 +19,7 @@
         <p>Description:</p>
         <p>{{product.prod_desc}}</p>
       </ion-item>
-      <ion-button type="button" shape="round" color="primary" expand="block" href="/tabs/(edit:{{product._id}})">Edit</ion-button>
+      <ion-button type="button" shape="round" color="primary" expand="block" [routerLink]="'/tabs/edit/' + product._id"   >Edit</ion-button>
       <ion-button type="button" shape="round" color="danger" expand="block" (click)="delete(product._id)">Delete</ion-button>
     </ion-card-content>
   </ion-card>
