@@ -2,3 +2,29 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.gkz-viewport {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    .cdk-virtual-scroll-content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .item {
+        height: 19px;
+        border-bottom: 1px dashed #aaa;
+    }
+}
+
+.example-viewport {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  background: white;
+  border: solid 1px #999;
+}
+.example-item {
+  height: 50px;
+  padding: 5px 10px;
+}

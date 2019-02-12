@@ -14,6 +14,9 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class HomePage {
 
   products: Product[] = [];
+  
+  items: any[] = [];
+
 
   constructor (
   	  public api: ApiService, 
@@ -21,6 +24,9 @@ export class HomePage {
   	  public router: Router, 
   	  public route: ActivatedRoute) {
     
+    this.items = Array(1000).fill(0).map(() => Math.round(Math.random() * 100));
+
+
   }
 
   ngOnInit() {

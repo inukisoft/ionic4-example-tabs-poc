@@ -8,6 +8,8 @@ import { HomePage } from './home.page';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   imports: [
     IonicModule,
@@ -15,6 +17,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     FormsModule,
       ScrollingModule,
   DragDropModule,
+  MatSelectModule,
     RouterModule.forChild([{ path: '', component: HomePage }])
   ],
   declarations: [HomePage]
